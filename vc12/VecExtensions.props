@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+	<VEC_EXTENSION>SSE2</VEC_EXTENSION>
+    <VEC_EXTENSION Condition="'$(PROCESSOR_IDENTIFIER)'=='Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'">AVX2</VEC_EXTENSION>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <EnableEnhancedInstructionSet Condition="'$(VEC_EXTENSION)'=='AVX2'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+	  <EnableEnhancedInstructionSet Condition="'$(VEC_EXTENSION)'=='SSE2'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="VEC_EXTENSION">
+      <Value>$(VEC_EXTENSION)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

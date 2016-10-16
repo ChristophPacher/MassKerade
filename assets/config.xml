@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<general>
+	<target_fps>60</target_fps>
+	<kinect>1</kinect>
+	<playback_1_or_live_0>1</playback_1_or_live_0>
+	<flip_camera_image>1</flip_camera_image>
+	<erode_roi_x>21</erode_roi_x>
+	<erode_roi_y>20</erode_roi_y>
+	<erode_roi_w>596</erode_roi_w>
+	<erode_roi_h>453</erode_roi_h>
+	<erode_iterations>10</erode_iterations>
+	<erode_kernel_size>3</erode_kernel_size>
+	<medianblur_iterations>2</medianblur_iterations>
+	<medianblur_kernel_size>3</medianblur_kernel_size>
+	<num_history_images>0</num_history_images>
+	<timeout>14400</timeout>
+	<learn_rate>0.00999999978</learn_rate>
+	<min_distance_to_average>320</min_distance_to_average>
+	<max_distance_to_average>330</max_distance_to_average>
+	<backgrnd_set_to>3600</backgrnd_set_to>
+	<enable_mayacam>0</enable_mayacam>
+	<camera_width>5.5</camera_width>
+	<minimum_depth>2500</minimum_depth>
+	<maximum_depth>5500</maximum_depth>
+	<mesh_translation x="0" y="0" z="4"/>
+	<mesh_rotation x="-5" y="0" z="0"/>
+	<mesh_threshold x="0.100000001" y="0.100000001" z="0.0799999982"/>
+	<min_contour_size>200</min_contour_size>
+	<contour_closing>4</contour_closing>
+	<image_scale>0.5</image_scale>
+	<search_radius>25</search_radius>
+	<maxima_match_radius_sq>1600</maxima_match_radius_sq>
+	<maxima_min_diff_to_surrounding>5</maxima_min_diff_to_surrounding>
+	<maxima_blob_value_range>10</maxima_blob_value_range>
+	<mask_erode_iterations>0</mask_erode_iterations>
+	<detector_threshold>8</detector_threshold>
+	<match_1_to_2_distance_ratio>0.800000012</match_1_to_2_distance_ratio>
+	<max_descriptor_distance_multi>200</max_descriptor_distance_multi>
+	<max_key_point_distance>300</max_key_point_distance>
+	<matching_radius_sq>20000</matching_radius_sq>
+	<seconds_remembered>10</seconds_remembered>
+	<new_person_min_size>800</new_person_min_size>
+	<max_person_pos_match_distance_sq>900</max_person_pos_match_distance_sq>
+	<max_area_diff_for_match>800</max_area_diff_for_match>
+	<height_to_head_radius>0.200000003</height_to_head_radius>
+	<min_hand_size>50</min_hand_size>
+	<min_defect_depth>3000</min_defect_depth>
+	<height_to_hand_threshold>0.319999993</height_to_hand_threshold>
+	<hands_straight_angle_rad>2.86705899</hands_straight_angle_rad>
+	<delay_between_hands_extended_and_shoot_ms>500</delay_between_hands_extended_and_shoot_ms>
+	<max_delay_between_hands_extended_and_shoot_ms>2500</max_delay_between_hands_extended_and_shoot_ms>
+	<left_image>0</left_image>
+	<right_image>3</right_image>
+	<light_pos x="0" y="0" z="1"/>
+	<point_light_01>0</point_light_01>
+	<light_shinyness>30</light_shinyness>
+	<light_color x="1" y="1" z="1"/>
+	<ambient_color r="0.117647067" g="0.117647067" b="0.117647067"/>
+	<max_particles>30</max_particles>
+	<player_radius>25</player_radius>
+	<orbit_joint_hz_damp x="2" y="0.0500000007" z="0"/>
+	<first_orbit_radius>0.25</first_orbit_radius>
+	<orbit_radius_incr>0.150000006</orbit_radius_incr>
+	<max_particles_collected>20</max_particles_collected>
+	<protons_on_start>3</protons_on_start>
+	<disappeared_timeout_s>2</disappeared_timeout_s>
+	<proton_joint_hz_damp_len x="3" y="0" z="0.0599999987"/>
+	<split_off_stages x="5" y="10" z="15"/>
+	<particle_min_max_vel x="0.200000003" y="1.14527619" z="0.044955533"/>
+	<particle_angular_min_max_vel x="1" y="4" z="0"/>
+	<particle_min_max_split_vel x="3" y="5" z="0"/>
+	<collected_speed>0.800000012</collected_speed>
+	<shot_speed>7</shot_speed>
+	<max_shot_bounces>3</max_shot_bounces>
+	<particle_radius>5</particle_radius>
+	<col_a r="0" g="0" b="1"/>
+	<col_b r="0" g="0" b="0"/>
+	<col_a_collected r="0" g="0" b="1"/>
+	<col_b_collected r="0" g="1" b="1"/>
+	<col_a_shot r="1" g="0" b="0"/>
+	<col_b_shot r="1" g="0" b="0"/>
+	<col_a_split_off r="0" g="0" b="0"/>
+	<col_b_split_off r="0.800000012" g="0.800000012" b="0.800000012"/>
+	<proton_damp_dampang_restituition x="0.5" y="0.5" z="0.5"/>
+	<col_a_proton r="0.368627459" g="0" b="1"/>
+	<col_b_proton r="1" g="0" b="1"/>
+</general>
+

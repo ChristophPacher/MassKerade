@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{74202EDD-91D2-4D2A-B0B6-355CEB16E6BE}</ProjectGuid>
+    <RootNamespace>BasicApp</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="..\externals\boost\boost.props" />
+    <Import Project="..\externals\openni\openni.props" />
+    <Import Project="..\externals\opencv\opencv.props" />
+    <Import Project="..\externals\cinder\cinder.props" />
+    <Import Project="..\externals\cinder_blocks\opencv\cinder_opencv.props" />
+    <Import Project="..\externals\cinder_blocks\openni\cinder_openni.props" />
+    <Import Project="..\externals\cinder\AntTweakBar.props" />
+    <Import Project="VecExtensions.props" />
+    <Import Project="..\externals\cinder_blocks\config\cinder_config.props" />
+    <Import Project="..\externals\cinder_blocks\KCB2\KCB2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\externals\boost\boost.props" />
+    <Import Project="..\externals\openni\openni.props" />
+    <Import Project="..\externals\opencv\opencv.props" />
+    <Import Project="..\externals\cinder\cinder.props" />
+    <Import Project="..\externals\cinder_blocks\opencv\cinder_opencv.props" />
+    <Import Project="..\externals\cinder_blocks\openni\cinder_openni.props" />
+    <Import Project="..\externals\cinder\AntTweakBar.props" />
+    <Import Project="VecExtensions.props" />
+    <Import Project="..\externals\cinder_blocks\config\cinder_config.props" />
+    <Import Project="..\externals\cinder_blocks\KCB2\KCB2.props" />
+    <Import Project="..\externals\cinder_blocks\suBox2d\suBox2d.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+    <Import Project="..\externals\boost\boost.props" />
+    <Import Project="..\externals\openni\openni.props" />
+    <Import Project="..\externals\opencv\opencv.props" />
+    <Import Project="..\externals\cinder\cinder.props" />
+    <Import Project="..\externals\cinder_blocks\opencv\cinder_opencv.props" />
+    <Import Project="..\externals\cinder_blocks\openni\cinder_openni.props" />
+    <Import Project="..\externals\cinder\AntTweakBar.props" />
+    <Import Project="VecExtensions.props" />
+    <Import Project="..\externals\cinder_blocks\config\cinder_config.props" />
+    <Import Project="..\externals\cinder_blocks\KCB2\KCB2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\externals\boost\boost.props" />
+    <Import Project="..\externals\openni\openni.props" />
+    <Import Project="..\externals\opencv\opencv.props" />
+    <Import Project="..\externals\cinder\cinder.props" />
+    <Import Project="..\externals\cinder_blocks\opencv\cinder_opencv.props" />
+    <Import Project="..\externals\cinder_blocks\openni\cinder_openni.props" />
+    <Import Project="..\externals\cinder\AntTweakBar.props" />
+    <Import Project="VecExtensions.props" />
+    <Import Project="..\externals\cinder_blocks\config\cinder_config.props" />
+    <Import Project="..\externals\cinder_blocks\KCB2\KCB2.props" />
+    <Import Project="..\externals\cinder_blocks\suBox2d\suBox2d.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\2fnopstk.csz\SDK\Native\inc;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\iprpuwsi.5bt\SDK\Native\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../../../../../include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\2fnopstk.csz\SDK\Native\inc;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\iprpuwsi.5bt\SDK\Native\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:inline %(AdditionalOptions)</AdditionalOptions>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\2fnopstk.csz\SDK\Native\inc;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\iprpuwsi.5bt\SDK\Native\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <MinimalRebuild>true</MinimalRebuild>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <Profile>true</Profile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../../../../../include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\2fnopstk.csz\SDK\Native\inc;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\iprpuwsi.5bt\SDK\Native\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalOptions>/Gw  /Zc:inline %(AdditionalOptions)</AdditionalOptions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <Profile>true</Profile>
+    </Link>
+    <PreBuildEvent />
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>../../../../../include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\externals\cinder_blocks\config\CinderConfig.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\KCB2\src\Kinect2.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\openni\Cinder-OpenNI.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2BroadPhase.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2CollideCircle.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2CollideEdge.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2CollidePolygon.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2Collision.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2Distance.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2DynamicTree.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2TimeOfImpact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2ChainShape.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2CircleShape.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2EdgeShape.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2PolygonShape.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2BlockAllocator.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Draw.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Math.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Settings.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2StackAllocator.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Timer.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2Body.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2ContactManager.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2Fixture.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2Island.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2World.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2WorldCallbacks.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2CircleContact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2Contact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2ContactSolver.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2PolygonContact.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2DistanceJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2FrictionJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2GearJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2Joint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2MotorJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2MouseJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2PrismaticJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2PulleyJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2RevoluteJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2RopeJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2WeldJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2WheelJoint.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Rope\b2Rope.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\Renderer.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\Sandbox.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\Scale.cpp" />
+    <ClCompile Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\SimpleControl.cpp" />
+    <ClCompile Include="..\src\background_substractor.cpp" />
+    <ClCompile Include="..\src\BasicApp.cpp" />
+    <ClCompile Include="..\src\blob.cpp" />
+    <ClCompile Include="..\src\blob_detector.cpp" />
+    <ClCompile Include="..\src\ContactListener.cpp" />
+    <ClCompile Include="..\src\contact_filter.cpp" />
+    <ClCompile Include="..\src\depth_camera.cpp" />
+    <ClCompile Include="..\src\kinect_v1.cpp" />
+    <ClCompile Include="..\src\feature_detector.cpp" />
+    <ClCompile Include="..\src\kinect_v2.cpp" />
+    <ClCompile Include="..\src\local_maxima.cpp" />
+    <ClCompile Include="..\src\masskerade_game.cpp" />
+    <ClCompile Include="..\src\mass_gameobj.cpp" />
+    <ClCompile Include="..\src\mass_particle.cpp" />
+    <ClCompile Include="..\src\mass_player.cpp" />
+    <ClCompile Include="..\src\mass_proton.cpp" />
+    <ClCompile Include="..\src\openni_reprojector.cpp" />
+    <ClCompile Include="..\src\openni_reprojector_gpu.cpp" />
+    <ClCompile Include="..\src\pacher_utilities.cpp" />
+    <ClCompile Include="..\src\person.cpp" />
+    <ClCompile Include="..\src\shoot_gesture.cpp" />
+    <ClCompile Include="..\src\Timer.cpp" />
+    <ClCompile Include="..\src\topdown_hand_finder.cpp" />
+    <ClCompile Include="..\src\topdown_hand_tracker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\externals\cinder_blocks\KCB2\lib\KCBv2Lib.h" />
+    <ClInclude Include="..\externals\cinder_blocks\KCB2\src\Kinect2.h" />
+    <ClInclude Include="..\externals\cinder_blocks\opencv\CinderOpenCV.h" />
+    <ClInclude Include="..\externals\cinder_blocks\openni\Cinder-OpenNI.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Box2D.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2BroadPhase.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2Collision.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2Distance.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2DynamicTree.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\b2TimeOfImpact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2ChainShape.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2CircleShape.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2EdgeShape.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2PolygonShape.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Collision\Shapes\b2Shape.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2BlockAllocator.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Draw.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2GrowableStack.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Math.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Settings.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2StackAllocator.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Common\b2Timer.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2Body.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2ContactManager.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2Fixture.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2Island.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2TimeStep.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2World.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\b2WorldCallbacks.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2CircleContact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2Contact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2ContactSolver.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Contacts\b2PolygonContact.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2DistanceJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2FrictionJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2GearJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2Joint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2MotorJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2MouseJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2PrismaticJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2PulleyJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2RevoluteJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2RopeJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2WeldJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Dynamics\Joints\b2WheelJoint.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\Box2D\Rope\b2Rope.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\Common.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\Renderer.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\Sandbox.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\Scale.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\box2d\SimpleControl.h" />
+    <ClInclude Include="..\externals\cinder_blocks\suBox2d\src\sansumbrella\suBox2D.h" />
+    <ClInclude Include="..\src\background_substractor.h" />
+    <ClInclude Include="..\src\BasicApp.h" />
+    <ClInclude Include="..\src\blob.h" />
+    <ClInclude Include="..\src\blob_detector.h" />
+    <ClInclude Include="..\src\boost_geometry_opencv_register.h" />
+    <ClInclude Include="..\src\ContactListener.h" />
+    <ClInclude Include="..\src\contact_filter.h" />
+    <ClInclude Include="..\src\depth_camera.h" />
+    <ClInclude Include="..\src\gesture_controller.h" />
+    <ClInclude Include="..\src\hands.h" />
+    <ClInclude Include="..\src\kinect_v1.h" />
+    <ClInclude Include="..\src\feature_detector.h" />
+    <ClInclude Include="..\src\kinect_v2.h" />
+    <ClInclude Include="..\src\local_maxima.h" />
+    <ClInclude Include="..\src\masskerade_game.h" />
+    <ClInclude Include="..\src\mass_gameobj.h" />
+    <ClInclude Include="..\src\mass_particle.h" />
+    <ClInclude Include="..\src\mass_player.h" />
+    <ClInclude Include="..\src\mass_proton.h" />
+    <ClInclude Include="..\src\openni_reprojector.h" />
+    <ClInclude Include="..\src\openni_reprojector_gpu.h" />
+    <ClInclude Include="..\src\OutputDebugStringBuf.h" />
+    <ClInclude Include="..\src\pacher_utilities.h" />
+    <ClInclude Include="..\src\person.h" />
+    <ClInclude Include="..\src\person_result.h" />
+    <ClInclude Include="..\src\shoot_gesture.h" />
+    <ClInclude Include="..\src\Timer.h" />
+    <ClInclude Include="..\src\topdown_hand_finder.h" />
+    <ClInclude Include="..\src\topdown_hand_tracker.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
